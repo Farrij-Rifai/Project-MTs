@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 class Nilai extends CI_Controller 
 { 
-	public function __construct()
+	public function __construct() 
 	{
 		parent::__construct(); 
 		$this->load->model('nilai_model');
@@ -37,6 +37,8 @@ class Nilai extends CI_Controller
 		$pesantren = $this->input->post('pesantren', true);
 		$fiqih = $this->input->post('fiqih', true);
 		$tahfidz = $this->input->post('tahfidz', true);
+		$pramuka = $this->input->post('pramuka', true);
+		$hadroh = $this->input->post('hadroh', true);
 
 		$data = array(
 			'nama_siswa' => $nama,
@@ -62,6 +64,8 @@ class Nilai extends CI_Controller
 			'pesantren' => $pesantren,
 			'fiqih' => $fiqih,
 			'tahfidz' => $tahfidz,
+			'pramuka' => $pramuka,
+			'hadroh' => $hadroh,
 		);
 
         $this->nilai_model->simpan($data);
@@ -122,6 +126,8 @@ class Nilai extends CI_Controller
 		$pesantren = $this->input->post('pesantren', true);
 		$fiqih = $this->input->post('fiqih', true);
 		$tahfidz = $this->input->post('tahfidz', true);
+		$pramuka = $this->input->post('pramuka', true);
+		$hadroh = $this->input->post('hadroh', true);
 
 		$data = array(
 			'nama_siswa' => $nama,
@@ -147,6 +153,8 @@ class Nilai extends CI_Controller
 			'pesantren' => $pesantren,
 			'fiqih' => $fiqih,
 			'tahfidz' => $tahfidz,
+			'pramuka' => $pramuka,
+			'hadroh' => $hadroh,
 		);
 
         $this->nilai_model->edit($data,$id);

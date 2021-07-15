@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!-- site icons -->
+    <link rel="icon" href="<?= base_url('assets/templat') ?>/images/mts.png" type="image/png" />
     <meta http-equiv="Content-type" content="text/html"; charset="windows-1252">
     <title>Nilai siswa</title>
-    <style type="text/css">
+    <style type="text/css"> 
         
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -80,6 +82,29 @@
 <?php ($pas) ?>
 <?php ($pts2) ?>
 <?php ($pat) ?>
+
+
+<?php 
+//Jumlah
+$jumlahpts1 =  $pts1['ipa']+$pts1['ips']+$pts1['matematika']+$pts1['bhs_indo']+$pts1['bhs_ing']+$pts1['bhs_jawa']+$pts1['pkn']+$pts1['sbk']+$pts1['pjok']+$pts1['tik']+$pts1['prakarya']+$pts1['bhs_arab']+$pts1['akidah']+$pts1['akhlak']+$pts1['quran_hadits']+$pts1['ski']+$pts1['pesantren']+$pts1['fiqih']+$pts1['tahfidz'];
+$jumlahpas =  $pas['ipa']+$pas['ips']+$pas['matematika']+$pas['bhs_indo']+$pas['bhs_ing']+$pas['bhs_jawa']+$pas['pkn']+$pas['sbk']+$pas['pjok']+$pas['tik']+$pas['prakarya']+$pas['bhs_arab']+$pas['akidah']+$pas['akhlak']+$pas['quran_hadits']+$pas['ski']+$pas['pesantren']+$pas['fiqih']+$pas['tahfidz'];
+$jumlahpts2 =  $pts2['ipa']+$pts2['ips']+$pts2['matematika']+$pts2['bhs_indo']+$pts2['bhs_ing']+$pts2['bhs_jawa']+$pts2['pkn']+$pts2['sbk']+$pts2['pjok']+$pts2['tik']+$pts2['prakarya']+$pts2['bhs_arab']+$pts2['akidah']+$pts2['akhlak']+$pts2['quran_hadits']+$pts2['ski']+$pts2['pesantren']+$pts2['fiqih']+$pts2['tahfidz'];
+$jumlahpat =  $pat['ipa']+$pat['ips']+$pat['matematika']+$pat['bhs_indo']+$pat['bhs_ing']+$pat['bhs_jawa']+$pat['pkn']+$pat['sbk']+$pat['pjok']+$pat['tik']+$pat['prakarya']+$pat['bhs_arab']+$pat['akidah']+$pat['akhlak']+$pat['quran_hadits']+$pat['ski']+$pat['pesantren']+$pat['fiqih']+$pat['tahfidz'];
+
+//Rata-Rata
+$ratapts1 = $jumlahpts1/19;
+$ratapas = $jumlahpas/19;
+$ratapts2 = $jumlahpts2/19;
+$ratapat = $jumlahpat/19;
+
+//Jumlah
+$jumlahpaseks = $pas['pramuka']+$pas['hadroh'];
+$jumlahpateks = $pat['pramuka']+$pat['hadroh'];
+//Rata-Rata
+$ratapaseks = $jumlahpaseks/2;
+$ratapateks = $jumlahpateks/2;
+?>
+
                 <tr>
                     <td width="100"><strong>NAMA</strong></td>
                     <td width="12"><strong>:</strong></td>
@@ -264,10 +289,17 @@
                 </tr>
                 <tr>
                     <th class="tr" colspan="2">Jumlah&nbsp;</th>
-                    <th class="tc">20</th>
-                    <th class="tc">20</th>
-                    <th class="tc">20</th>
-                    <th class="tc">20</th>
+                    <th class="tc"><?= $jumlahpts1 ?></th>
+                    <th class="tc"><?= $jumlahpas ?></th>
+                    <th class="tc"><?= $jumlahpts2 ?></th>
+                    <th class="tc"><?= $jumlahpat ?></th>
+                </tr>
+                <tr>
+                    <th class="tr" colspan="2">Rata-rata&nbsp;</th>
+                    <th class="tc"><?= round($ratapts1, 2) ?></th>
+                    <th class="tc"><?= round($ratapas, 2) ?></th>
+                    <th class="tc"><?= round($ratapts2, 2) ?></th>
+                    <th class="tc"><?= round($ratapat, 2) ?></th>
                 </tr>
             </tbody>
         </table>
@@ -289,25 +321,32 @@
                 <tr>
                     <td height="30">1</td>
                     <td class="tl">PRAMUKA<br></td>
-                    <td>2</td>
                     <td> / &nbsp; &nbsp; / </td>
+                    <td><?= $pas['pramuka']; ?></td>
                     <td> / &nbsp; &nbsp; /</td>
-                    <td> / &nbsp; &nbsp; /</td>
+                    <td><?= $pat['pramuka']; ?></td>
                 </tr>
                 <tr>
                     <td height="30">2</td>
                     <td class="tl">HADROH<br></td>
-                    <td>2</td>
                     <td> / &nbsp; &nbsp; / </td>
-                    <td> / &nbsp; &nbsp; /</td>
-                    <td> / &nbsp; &nbsp; /</td>
+                    <td><?= $pas['hadroh']; ?></td>
+                    <td> / &nbsp; &nbsp; / </td>
+                    <td><?= $pat['hadroh']; ?></td>
                 </tr>
                 <tr>
                     <th class="tr" colspan="2">Jumlah&nbsp;</th>
-                    <th class="tc">20</th>
-                    <th class="tc">20</th>
-                    <th class="tc">20</th>
-                    <th class="tc">20</th>
+                    <th class="tc">  &nbsp;- &nbsp;  </th>
+                    <th class="tc"><?= $jumlahpaseks ?></th>
+                    <th class="tc">  &nbsp;- &nbsp;  </th>
+                    <th class="tc"><?= $jumlahpateks ?></th>
+                </tr>
+                <tr>
+                    <th class="tr" colspan="2">Rata-rata&nbsp;</th>
+                    <th class="tc">  &nbsp;- &nbsp;  </th>
+                    <th class="tc"><?= round($ratapaseks, 2) ?></th>
+                    <th class="tc">  &nbsp;- &nbsp;  </th>
+                    <th class="tc"><?= round($ratapateks, 2) ?></th>
                 </tr>
             </tbody>
         </table>

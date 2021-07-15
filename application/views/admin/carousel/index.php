@@ -97,8 +97,10 @@
     <div class="modal-body">
         <form action="<?php echo base_url('admin/carousel/simpan_post')?>" method="post" enctype="multipart/form-data">
             <h5>Judul Carousel:</h5>
+            <small>#wajib diisi!</small>
             <input type="text" name="judul" class="form-control" placeholder="Judul carousel" required/><br/>
             <h5>Upload Foto</h5>
+            <small>#wajib diisi!</small><br/>
             <input type="file" name="filefoto" required><br/><br/>
             <div class="modal-footer">
                 <button type="reset" class="btn btn-danger">Reset</button>
@@ -154,8 +156,10 @@ foreach ($carousel as $value) : $no++ ?>
     <div class="modal-body">
         <form action="<?php echo base_url(); ?>admin/carousel/ubah_data/<?php echo $value['id_carousel'];?>" method="post" enctype="multipart/form-data">
             <h5>Judul Carousel:</h5>
+            <small>#wajib diisi!</small>
             <input value="<?= $value['jdl_carousel']; ?>" type="text" name="judul" class="form-control" placeholder="Judul carousel" required/><br/>
             <h5>Upload Foto</h5>
+            <small>#wajib diisi!</small>
             <input type="file" name="filefoto"><br/><br/>
             <img src="<?php echo base_url().'assets/foto/carousel/'.$value['carousel_image'];?>" width="100">
             <div class="modal-footer">

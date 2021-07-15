@@ -2,26 +2,26 @@
 class Berita_model extends CI_Model
 { 
  
-	function simpan_berita($jdl,$berita,$gambar) 
+	public function simpan_berita($jdl,$berita,$gambar) 
 	{
 		//$hsl=$this->db->query("INSERT INTO tbl_berita (berita_judul,berita_isi,berita_image) VALUES ('$jdl','$berita','$gambar')");
 		//return $hsl;
-		//Insert Menggunakan Modul CODEIGNITER
+		//Insert Menggunakan Modul CODEIGNITER 
 		$data = array(
-			'berita_judul' => $jdl,
+			'berita_judul' => $jdl, 
 			'berita_isi' =>  $berita,
 			'berita_image' => $gambar
 		);
 		return $this->db->INSERT('tbl_berita', $data);
 	}
  
-	function get_berita_by_kode($kode)
+	public function get_berita_by_kode($kode)
 	{
 		$hsl=$this->db->query("SELECT * FROM tbl_berita WHERE berita_id='$kode'");
 		return $hsl;
 	}
 
-	function getAllBerita() 
+	public function getAllBerita() 
 	{
 		$this->db->order_by('berita_id', 'DESC');
 		return $this->db->get('tbl_berita')->result_array();

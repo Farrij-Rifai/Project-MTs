@@ -16,6 +16,7 @@ class Galeri extends CI_Controller {
 	public function index() 
 	{
 		$data['admin'] = $this->session->userdata('nama');
+		$data['foto'] = $this->session->userdata('foto_admin');
 		$data['judul'] = 'Data Foto Galeri';
 		$data['galeri'] = $this->galeri_model->getAllGaleri();
 		$this->load->view('admin/header', $data);

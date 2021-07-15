@@ -4,12 +4,18 @@
 </br></br>
 
 <?php if ($this->session->flashdata('flash') ):  ?>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-  Pendaftaran <strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    Pendaftaran <strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    Data yang telah anda inputkan akan di cek oleh admin 1x24 jam pada jam kerja. bila ditemukan data yang tidak sesuai maka admin akan menghubungi melalui "WhatsApp" pada nomor yang telah anda inputkan <strong><?= $this->session->flashdata('flash1'); ?>.</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 <?php endif; ?>
 
 <div class="container p-3 my-3 border">
@@ -110,7 +116,7 @@
   </div>
   <div class="col-sm-3">
     <div class="form-group">
-      <label><h4>No Telp:</h4></label>
+      <label><h4>No Telp(WhatApp):</h4></label>
       <input type="text" name="no_telp" class="form-control" placeholder="Masukan No Telp" value="<?= set_value('no_telp') ?>">
       <?= form_error('no_telp', '<small class="text-danger">', '</small>'); ?>
     </div>

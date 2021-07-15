@@ -27,8 +27,8 @@ class Loginadmin extends CI_Controller
 
 	private function _login()
 	{
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
+		$username = htmlspecialchars($this->input->post('username', true));
+		$password = $this->input->post('password', true);
 
 		$admin = $this->db->get_where('admin', ['username' => $username])->row_array();
 
@@ -41,20 +41,20 @@ class Loginadmin extends CI_Controller
 					'nama' => $admin['nama_admin']
 				];
 				$this->session->set_userdata($data);
-				redirect('admin/admin');
+				redirect('admin/dashboard');
 			} else {
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role"alert">Gagal login!</div>');
-				redirect('login');
+				redirect('loginadmin');
 			}
 		} else {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role"alert">Gagal login!</div>');
-			redirect('login');
+			redirect('loginadmin');
 		}
 	}
 
 	public function logout()
 	{
-		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('nama');
 
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role"alert">Logout berhasil</div>');
 		redirect('loginadmin');

@@ -17,7 +17,7 @@ class Guru extends CI_Controller {
 	{
 		$data['admin'] = $this->session->userdata('nama');
 		$data['judul'] = 'Data Guru';
-		$data['guru'] = $this->guru_model->getAllBerita();
+		$data['guru'] = $this->guru_model->getAllDataGuru();
 		$this->load->view('admin/header', $data);
 		$this->load->view('admin/guru/index');
 		$this->load->view('admin/footer');

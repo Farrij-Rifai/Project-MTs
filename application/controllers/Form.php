@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+ 
 class Form extends CI_Controller {
 
 	//Model di load disini karena ada lebih dari 1 function yang pake
@@ -43,8 +43,8 @@ class Form extends CI_Controller {
 			$this->load->view('templates/header', $data);
 			$this->load->view('pendaftaran/form_daftar', $x);
 			$this->load->view('templates/footer');
-		} else {
-			$this->_simpan();
+		} else { 
+			$this->_simpan(); 
 		}
 	}
 
@@ -113,25 +113,25 @@ class Form extends CI_Controller {
 			redirect('form');
 		}
 
-		$nama = $this->input->post('nama', true);
-		$nik = $this->input->post('nik', true);
-		$tmp_lahir = $this->input->post('tempat_lahir', true);
+		$nama = htmlspecialchars($this->input->post('nama', true));
+		$nik = htmlspecialchars($this->input->post('nik', true));
+		$tmp_lahir = htmlspecialchars($this->input->post('tempat_lahir', true));
 		$tt_lahir = $this->input->post('tanggal_lahir', true);
 		$jenis_kelamin = $this->input->post('jk', true);
 		$kewarganegaraan = $this->input->post('kewarganegaraan', true);
 		$agama = $this->input->post('agama', true);
-		$nama_wali = $this->input->post('nama_wali', true);
-		$email = $this->input->post('email', true);
-		$no_tlp = $this->input->post('no_telp', true);
-		$alamat_pendaftar = $this->input->post('alamat', true);
+		$nama_wali = htmlspecialchars($this->input->post('nama_wali', true));
+		$email = htmlspecialchars($this->input->post('email', true));
+		$no_tlp = htmlspecialchars($this->input->post('no_telp', true));
+		$alamat_pendaftar = htmlspecialchars($this->input->post('alamat', true));
 		$id_provinsi = $this->input->post('provinsi', true);
 		$id_kabupaten = $this->input->post('kabupaten', true);
 		$id_kecamatan = $this->input->post('kecamatan', true);
-		$pos = $this->input->post('kode_pos', true);
+		$pos = htmlspecialchars($this->input->post('kode_pos', true));
 		$pend_akhir = $this->input->post('pendidikan', true);
-		$nama_sekolah = $this->input->post('nama_sekolah', true);
-		$nilai_raport = $this->input->post('nilai_raport', true);
-		$nisn = $this->input->post('nisn', true);
+		$nama_sekolah = htmlspecialchars($this->input->post('nama_sekolah', true));
+		$nilai_raport = htmlspecialchars($this->input->post('nilai_raport', true));
+		$nisn = htmlspecialchars($this->input->post('nisn', true));
 
 		$pasfoto = $gbr1['file_name'];
 		$ijazah = $gbr2['file_name'];
@@ -164,7 +164,8 @@ class Form extends CI_Controller {
 		);
 
 		$this->pendaftaran_model->simpan($data);
-		$this->session->set_flashdata('flash', 'Pendaftaran Berhasil');
+		$this->session->set_flashdata('flash', 'Ditambahkan');
+		$this->session->set_flashdata('flash1', $no_tlp);
 		redirect('form');
 	}
 } 

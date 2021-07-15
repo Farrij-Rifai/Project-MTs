@@ -1,7 +1,7 @@
 <?php 
-class Event_model extends CI_Model{ 
+class Event_model extends CI_Model{
  
-	function simpan_event($jdl,$desk,$gambar)
+	public function simpan_event($jdl,$desk,$gambar)
 	{
 		$data = array(
 			'jdl_event' => $jdl,
@@ -11,13 +11,20 @@ class Event_model extends CI_Model{
 		return $this->db->INSERT('tbl_event', $data);
 	}
 
-	function getCarouselKode($kode)
+	//PAGINATION QUERY UNTUK HALAMAN USER BESOK!!!//
+	public function getEvent($limit, $start) 
 	{
-		$hsl=$this->db->query("SELECT * FROM tbl_event WHERE id_event='$kode'");
-		return $hsl;
+		$this->db->ORDER_BY("id_event", "DESC");
+		$query = $this->db->get('tbl_event', $limit, $start);
+		return $query->result_array();
 	}
 
-	function getAllEvent() 
+	public function countAllEvent()
+	{
+		return $this->db->get('tbl_event')->num_rows();
+	}
+
+	public function getAllEvent() 
 	{
 		$this->db->order_by('id_event', 'DESC');
 		return $this->db->get('tbl_event')->result_array();

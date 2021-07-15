@@ -1,7 +1,7 @@
 <?php
 class Guru_model extends CI_Model{ 
 
-	function getAllBerita() 
+	function getAllDataGuru() 
 	{
 		return $this->db->query("SELECT * FROM tbl_guru ORDER BY id_guru DESC")->result_array(); 
 	}

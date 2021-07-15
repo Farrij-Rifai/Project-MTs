@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="en"> 
+<!DOCTYPE html> 
+<html lang="en">  
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="<?= base_url('assets/admin/') ?>img/logo.PNG">
+  <link rel="icon" href="<?= base_url('assets/templat') ?>/images/mts.png" type="image/png">
   <title><?php echo $judul; ?></title>
 
   <!-- Google Font: Source Sans Pro -->
@@ -39,13 +39,13 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?php echo base_url();?>home2" class="nav-link">Dashboard</a>
+        <a href="<?php echo base_url('admin/dashboard');?>" class="nav-link">Dashboard</a>
       </li>
 
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <!-- <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -54,7 +54,7 @@
           </button>
         </div>
       </div>
-    </form>
+    </form> -->
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -71,11 +71,6 @@
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
-          <div class="dropdown-divider">
-          </div>
-          <a href="<?php echo base_url();?>profilg" class="dropdown-item">
-            <i class="nav-icon fas fa-th"></i>   Lihat Profil
-          </a>
           <div class="dropdown-divider"></div>
           <a href="<?= base_url('loginadmin/logout') ?>" class="dropdown-item">
             <i class="fas fa-users mr-2"></i>Logout
@@ -91,9 +86,9 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?php echo base_url();?>home2" class="brand-link bg-success">
-      <img src="<?= base_url('assets/admin/') ?>img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"><marquee behavior="scroll" width="200">MTs Bima Bhakti Pertiwi</marquee></span>
+    <a href="<?php echo base_url('admin/dashboard');?>" class="brand-link bg-success">
+      <img src="<?= base_url('assets/templat') ?>/images/mts.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
+      <span class="brand-text font-weight-light"><marquee behavior="scroll" width="200" >MTs Bima Bhakti Pertiwi</marquee></span>
     </a>
 
     <!-- Sidebar -->
@@ -104,7 +99,8 @@
           <img src="<?= base_url('assets/admin/') ?>img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?php echo base_url();?>profilg" class="d-block"><?php echo $admin; ?></a>
+          <a href="#" class="d-block"><?php echo $admin; ?></a>
+          <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
         </div>
       </div>
 
@@ -116,7 +112,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-                <a href="<?php echo base_url();?>home2" class="nav-link">
+                <a href="<?php echo base_url('admin/dashboard');?>" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
                     Dashboard
@@ -126,7 +122,7 @@
               <br>
     <div class="title" style="margin-left: 10px; color: white;"><h5>INTERFACE</h5></div>
               <li class="nav-item">
-                <a href="<?= base_url('admin/admin'); ?>" class="nav-link">
+                <a href="<?= base_url('admin/berita'); ?>" class="nav-link">
                   <i class="nav-icon fas fa-th"></i>
                   <p>
                     Berita
@@ -143,7 +139,7 @@
               </li>
               <li class="nav-item">
                 <a href="<?= base_url('admin/event'); ?>" class="nav-link">
-                  <i class="nav-icon far fa-image"></i>
+                  <i class="nav-icon fas fa-columns "></i>
                   <p>
                     Event
                   </p>
@@ -157,17 +153,10 @@
                   </p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="<?= base_url('admin/guru'); ?>" class="nav-link">
-                  <i class="nav-icon fas fa-book"></i>
-                  <p>
-                    Guru
-                  </p>
-                </a>
-              </li>
+
               <li class="nav-item">
                 <a href="<?= base_url('admin/ppdb'); ?>" class="nav-link">
-                  <i class="nav-icon fas fa-columns"></i>
+                  <i class="nav-icon fas fa-book"></i>
                   <p>
                     PPDB
                   </p>
@@ -183,54 +172,22 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= base_url('data_admin'); ?>" class="nav-link">
+                    <a href="<?= base_url('admin/akun'); ?>" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Admin</p>
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-table"></i>
-                  <p>
-                    Data Siswa
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= base_url('siswa/tambah_siswa'); ?>" class="nav-link">
-                      <i class="far fa-plus-square nav-icon"></i>
-                      <p>Tambah Data Siswa</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('siswa'); ?>" class="nav-link">
+                    <a href="<?= base_url('admin/guru'); ?>" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Semua Siswa</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('siswa/kelas7'); ?>" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Kelas VII</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('siswa/kelas8'); ?>" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Kelas VIII</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('siswa/kelas9'); ?>" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Kelas IX</p>
+                      <p>Guru</p>
                     </a>
                   </li>
                 </ul>
               </li>
+              
               <br>
     <div class="title" style="margin-left: 10px; color: white;"><h5>DATA NILAI SISWA</h5></div>
               <li class="nav-item">

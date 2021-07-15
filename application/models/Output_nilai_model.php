@@ -38,12 +38,6 @@ class Output_nilai_model extends CI_Model
 
 
 
-
-
-
-
-
-
 	//Modal nilai kelas 7
 
 	public function getPts1_7($value)

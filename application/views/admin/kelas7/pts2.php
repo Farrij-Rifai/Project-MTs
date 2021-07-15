@@ -107,43 +107,43 @@
             <h4><strong>Mata Pelajaran.</strong></h4>
             <hr>
             <h5>IPA:</h5>
-            <input type="number" name="ipa" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="ipa" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>IPS:</h5>
-            <input type="number" name="ips" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="ips" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Matematika:</h5>
-            <input type="number" name="mtk" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="mtk" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Bahasa Indonesia:</h5>
-            <input type="number" name="bindo" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="bindo" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Bahasa Inggris:</h5>
-            <input type="number" name="bing" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="bing" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Bahasa Jawa:</h5>
-            <input type="number" name="bjawa" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="bjawa" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>PKN:</h5>
-            <input type="number" name="pkn" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="pkn" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Seni Budaya:</h5>
-            <input type="number" name="sbk" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="sbk" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>PJOK:</h5>
-            <input type="number" name="pjok" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="pjok" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>TIK:</h5>
-            <input type="number" name="tik" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="tik" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Prakarya:</h5>
-            <input type="number" name="prakarya" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="prakarya" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Bahasa Arab:</h5>
-            <input type="number" name="barab" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="barab" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Akidah:</h5>
-            <input type="number" name="akidah" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="akidah" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Akhlak:</h5>
-            <input type="number" name="akhlak" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="akhlak" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Qur'an dan Hadits:</h5>
-            <input type="number" name="quran_hadits" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="quran_hadits" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>SKI:</h5>
-            <input type="number" name="ski" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="ski" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Kepesantrenan:</h5>
-            <input type="number" name="pesantren" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="pesantren" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Fiqih:</h5>
-            <input type="number" name="fiqih" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="fiqih" class="form-control" placeholder="nilai siswa"/><br/>
             <h5>Tahfidz:</h5>
-            <input type="number" name="tahfidz" class="form-control" placeholder="nilai siswa"/><br/>
+            <input type="text" name="tahfidz" class="form-control" placeholder="nilai siswa"/><br/>
             <div class="modal-footer">
                 <button type="reset" class="btn btn-danger">Reset</button>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -303,43 +303,43 @@ foreach ($nilai as $value) : $no++ ?>
             <h4><strong>Mata Pelajaran.</strong></h4>
             <hr>
             <h5>IPA:</h5>
-            <input type="number" name="ipa" value="<?= $value['ipa'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="ipa" value="<?= $value['ipa'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>IPS:</h5>
-            <input type="number" name="ips" value="<?= $value['ips'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="ips" value="<?= $value['ips'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Matematika:</h5>
-            <input type="number" name="mtk" value="<?= $value['matematika'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="mtk" value="<?= $value['matematika'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Bahasa Indonesia:</h5>
-            <input type="number" name="bindo" value="<?= $value['bhs_indo'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="bindo" value="<?= $value['bhs_indo'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Bahasa Inggris:</h5>
-            <input type="number" name="bing" value="<?= $value['bhs_ing'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="bing" value="<?= $value['bhs_ing'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Bahasa Jawa:</h5>
-            <input type="number" name="bjawa" value="<?= $value['bhs_jawa'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="bjawa" value="<?= $value['bhs_jawa'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>PKN:</h5>
-            <input type="number" name="pkn" value="<?= $value['pkn'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="pkn" value="<?= $value['pkn'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Seni Budaya:</h5>
-            <input type="number" name="sbk" value="<?= $value['sbk'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="sbk" value="<?= $value['sbk'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>PJOK:</h5>
-            <input type="number" name="pjok" value="<?= $value['pjok'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="pjok" value="<?= $value['pjok'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>TIK:</h5>
-            <input type="number" name="tik" value="<?= $value['tik'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="tik" value="<?= $value['tik'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Prakarya:</h5>
-            <input type="number" name="prakarya" value="<?= $value['prakarya'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="prakarya" value="<?= $value['prakarya'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Bahasa Arab:</h5>
-            <input type="number" name="barab" value="<?= $value['bhs_arab'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="barab" value="<?= $value['bhs_arab'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Akidah:</h5>
-            <input type="number" name="akidah" value="<?= $value['akidah'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="akidah" value="<?= $value['akidah'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Akhlak:</h5>
-            <input type="number" name="akhlak" value="<?= $value['akhlak'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="akhlak" value="<?= $value['akhlak'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Qur'an dan Hadits:</h5>
-            <input type="number" name="quran_hadits" value="<?= $value['quran_hadits'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="quran_hadits" value="<?= $value['quran_hadits'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>SKI:</h5>
-            <input type="number" name="ski" value="<?= $value['ski'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="ski" value="<?= $value['ski'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Kepesantrenan:</h5>
-            <input type="number" name="pesantren" value="<?= $value['pesantren'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="pesantren" value="<?= $value['pesantren'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Fiqih:</h5>
-            <input type="number" name="fiqih" value="<?= $value['fiqih'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="fiqih" value="<?= $value['fiqih'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <h5>Tahfidz:</h5>
-            <input type="number" name="tahfidz" value="<?= $value['tahfidz'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
+            <input type="text" name="tahfidz" value="<?= $value['tahfidz'];?>" class="form-control" placeholder="nilai siswa" required/><br/>
             <div class="modal-footer">
                 <button type="reset" class="btn btn-danger">Reset</button>
                 <button type="submit" class="btn btn-primary">Submit</button>

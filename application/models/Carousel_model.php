@@ -1,7 +1,7 @@
 <?php 
 class Carousel_model extends CI_Model{ 
  
-	function simpan_carousel($jdl,$gambar) 
+	public function simpan_carousel($jdl,$gambar)  
 	{
 		$data = array(
 			'jdl_carousel' => $jdl,
@@ -10,16 +10,29 @@ class Carousel_model extends CI_Model{
 		return $this->db->INSERT('tbl_carousel', $data);
 	}
 
-	function getCarouselKode($kode)
+	public function getCarouselKode($kode)
 	{
 		$hsl=$this->db->query("SELECT * FROM tbl_carousel WHERE id_carousel='$kode'");
 		return $hsl;
 	}
 
-	function getAllCarousel() 
+	public function getAllCarousel() 
 	{
 		$this->db->order_by('id_carousel', 'DESC');
 		return $this->db->get('tbl_carousel')->result_array();
+	}
+
+	//PAGINATION QUERY UNTUK HALAMAN USER BESOK!!!//
+	public function getCarousel($limit, $start) 
+	{
+		$this->db->ORDER_BY("id_carousel", "DESC");
+		$query = $this->db->get('tbl_carousel', $limit, $start);
+		return $query->result_array();
+	}
+
+	public function countAllCarousel()
+	{
+		return $this->db->get('tbl_carousel')->num_rows();
 	}
 
 	public function hapusDataCarousel($id)
