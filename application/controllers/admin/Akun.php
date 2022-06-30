@@ -8,7 +8,7 @@ class Akun extends CI_Controller
 		parent::__construct(); 
 		$this->load->model('akun_model');
         if($this->session->userdata('nama') == null){
-      		redirect('loginadmin');
+      		redirect('loginadmin'); 
     	}
 	}
 

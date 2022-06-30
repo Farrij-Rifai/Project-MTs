@@ -155,7 +155,7 @@
 <div class="container-fluid">
   <div class="container">
       <h4>PENDAFTARAN ONLINE</h4>
-      <a href="<?php  echo site_url ('form/index/form_daftar'); ?>" class="white_bt bt_main">Go somewhere</a>
+      <a href="<?php  echo site_url ('form/index/form_daftar'); ?>" class="white_bt bt_main">Daftar Sekarang</a>
   </div>
 </div>
 <!-- Akhir Kolom Pendaftaran -->

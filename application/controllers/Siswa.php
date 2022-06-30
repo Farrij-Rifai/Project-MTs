@@ -31,7 +31,7 @@ class Siswa extends CI_Controller {
 	public function kelas8() 
 	{
 		$data['judul'] = 'Data Siswa';
-		$data['siswa'] = $this->siswa_model->getSiswaVIII();
+		$data['siswa'] = $this->siswa_model->getSiswaVIII(); 
 		$this->load->view('admin/header', $data);
 		$this->load->view('admin/siswa/index', $data);
 		$this->load->view('admin/footer');

@@ -82,7 +82,7 @@
         </div>
     </section>
 
-    <!-- Modal Tambah -->
+<!-- Modal Tambah -->
 <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
